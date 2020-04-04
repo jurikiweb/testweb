@@ -3,6 +3,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Oswald:wght@500&display=swap');
 
+body:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url("../images/slide_images/ya_chichibu_0165.jpg") center no-repeat;
+  background-size:cover;
+}
+
+
+
+
 /*
 body{
 	background-image : url("../images/slide_images/ya_chichibu_0165.jpg");
@@ -235,7 +251,8 @@ mapinfo-text{
 /*-----------------画面サイズが575pxまでメディアクエリここから------------*/
 
 @media screen and (max-width:575px) { 
-	
+
+/*
 body:before{
   content:"";
   display:block;
@@ -248,7 +265,7 @@ body:before{
   background:url("../images/slide_images/ya_chichibu_0165.jpg") center no-repeat;
   background-size:cover;
 }
-	
+*/	
 	
 	
 	
@@ -400,13 +417,13 @@ nav .inner ul li a:hover {
 		display:none;
 	}
 	
-body{
+/*body{
 	background-image : url("../images/slide_images/ya_chichibu_0165.jpg");
 	background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-	}	
+	}*/	
 
 	
 	
