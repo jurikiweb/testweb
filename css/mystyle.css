@@ -1,0 +1,494 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Oswald:wght@500&display=swap');
+
+body{
+	background-image : url("../images/slide_images/ya_chichibu_0165.jpg");
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+	}
+
+P{
+	font-family: 'Noto Sans JP', sans-serif;
+	
+
+}
+
+.clear{
+	opacity: 0.0;
+}
+/*jumbotronにつけて高さをファーストビューに設定*/
+.jumbotron-extend {
+    position: relative;
+    height: 100vh;
+    /*min-height: 300px;*/
+    background: url("../images/clearJumbotron3.png") no-repeat center center;
+    background-size: cover;
+	color:#aaa;
+	margin-bottom:0px;
+}
+
+.logo-height{
+  height: 40vw;
+}
+
+.blackbox{
+background:rgba(15, 15, 15,0.6);/*(98, 98, 148,0.5);*/	
+/*background-image : url("../images/contentsBackground.png");*/
+background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+	height:auto;
+	padding-bottom:70px;
+}
+
+footer{
+	background:#FFFFFF;
+	height:7vh;
+	width:100%;
+}
+
+.footfonts{
+	font-size:11px;
+	text-align:center;
+	margin:auto;
+}
+
+h1{
+  color:#ffffff;
+}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  color:#ffffff;
+}
+
+h3{
+  color:#ffffff;
+}
+
+.background-photo{
+	font-family: 'Oswald', sans-serif;
+    color:#40945d;
+}
+
+.background-photo-back{
+	background:#fff;
+	width:240px;
+	height:50px;
+	margin:40px auto;
+	padding:10px;
+	font-family: 'Oswald', sans-serif;
+    color:#40945d;
+}
+
+.contact-back{
+	background:#fff;
+	width:240px;
+	height:110px;
+	margin:40px auto;
+	padding:10px;
+	font-family: 'Oswald', sans-serif;
+    color:#40945d;
+}
+
+.colorfont{
+	color:#40945d;
+}
+
+
+.p-white{
+	color:#ffffff;
+	font-size: 16px;
+}
+
+.whiteframe{
+	border: 2px solid;
+	border-color:#ffffff;
+	padding:15px;
+}
+
+.soroe{
+	text-align:center;
+	margin-top:30px;
+}
+
+
+.logosize{
+	height:300px;
+	width: 290px;
+}
+
+.aboutmargin{
+	margin-top:60px;
+	margin-bottom:50px;
+}
+
+.whiteframe h2{
+	margin:20px 0;
+
+}
+
+.whiteframe h3{
+	margin:20px;
+}
+
+
+.whtiebox{
+	margin:40px 0;
+}
+
+.map-info{
+	height:200px;
+	width:450px;
+	background:#fff;
+}
+
+.container iframe{
+	width:100%;
+	margin:0px;
+}
+
+.widthbox{
+	padding:0px;
+}
+
+.undermaparea{
+	padding:0px;
+	background:#fff;
+	heigt:500px;
+	border:none;
+	
+}
+
+iframe{
+	margin-bottom:0px !important;
+	padding-bottom:0px !important;
+	border:none;
+}
+
+.hcolorblack{
+	color:black;
+}
+
+
+mapinfo-text{
+	margin:30px;
+}
+
+.h-margin{
+	margin-top:100px;
+	margin-bottom:60px;
+}
+
+.cont100{
+	width:100%
+}
+
+.containerwide{
+	width:100%;
+	margin:0 auto;
+}
+
+/*--フローティングトップ--*/
+#page_top{
+  width: 90px;
+  height: 70px;
+  position: fixed;
+  right: 20px;/*0;*/
+  bottom: 80px;
+  background: #7d8585;
+  /*opacity: 0.6;*/
+  border-radius: 0%;
+  z-index:30;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 70px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -10px;/*-5px;*/
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+/*-----------------画面サイズが575pxまでメディアクエリここから------------*/
+
+@media screen and (max-width:575px) { 
+    /*画面サイズが575pxまではここを読み込む*/
+.logosize{
+	width:150px;
+	height:160px;
+}
+
+.jumbotron-extend {
+  position: relative;
+  height: 70vh;
+  /*min-height: 300px;*/
+  background: url("../images/clearJumbotron3.png") no-repeat center center;
+  background-size: cover;
+  color:#aaa;
+}
+	.headhide{
+		display:none;
+	}
+	
+/*----------スマホ用ハンバーガーメニューここから----------*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative; 
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
+  nav {
+    left: -220px;
+    width: 220px;
+  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;/*#333;*/
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+/*スマホ用ハンバーガーメニューここまで*/
+	
+}
+/*-------------------画面サイズ*575px以下メディアクエリここまで----------*/
+
+
+
+
+/*-------------------画面サイズが576px以上メディクエリ-----------------*/
+@media screen and (min-width:576px ){
+	.hamburger{
+		display:none;
+	}
+/*--スティッキーヘッダー--*/
+
+.fix-header {
+	background-color:#fff;
+	line-height: 46px;/*66px;*/
+	top: -66px;/* 上に隠す鷹さ */
+	left: 0;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	color: #121212;
+	padding-top:2px;/*15px;*/
+	position: fixed;
+	opacity:0;/* 	最初読み込んだときは透過 */
+	z-index: 1000;/*　他のアイテムに対して最上位のレイヤーになるように */
+/*	opacity: 0; */
+	}
+ 
+	.fix-header-contents{
+		width:800px;
+		margin: 0 auto;
+	}
+ 
+.fix-header ul{
+list-style-type: none;
+}
+ 
+.fix-header li{
+	float:left;
+	margin-right:32px;
+}
+ 
+.fix-header li a,.fix-header li a:visited{
+	color: #000;
+	text-decoration: none;
+}
+.fix-header li a:hover{
+	color: #7e7f80;
+}
+.fix-header li:last-child{
+	margin-right:0;
+}
+#fix-header-logo{
+	float:left;
+}
+ 
+#fix-header-logo img{
+width:150px;/*54px;*/
+}
+ 
+#fix-header-menus{
+	float:right;
+	text-align: right;
+}
+#scroll-fix-menu img{
+padding-bottom: 5px;
+   border-bottom:2px solid #fff;
+}
+ 
+#scroll-fix-menu .current-menu-item img{
+   border-bottom:2px solid #0f142a;
+}
+ 
+#scroll-fix-menu a img:hover{
+   border-bottom:2px solid #0f142a;
+	transition:border-color 0.6s ease-out;
+}
+ 
+/* micro clearfx */
+.cf:before, .cf:after {
+		content:"";
+		display:table
+}
+.cf:after { clear:both }
+.cf { zoom:1 } /* For IE 6/7 */
+ 
+	nav{
+		width:100%;
+		background-color: #646464;
+	}
+	.nav-container{
+		width:800px;
+		margin: 0 auto;
+	}
+	
+	nav ul{
+		padding:0;
+		list-style: none;
+	}
+	
+	nav ul li{
+		float:left;
+		margin:10px 30px 10px 0;
+	}
+	
+	nav ul li a,nav ul li a:visited{
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	article{
+		width:800px;
+		margin:20px auto ;
+	}
+
+/*--スティッキーヘッダーここまで--*/
+	.humbag-no{
+		display:none;
+	}
+}
+
